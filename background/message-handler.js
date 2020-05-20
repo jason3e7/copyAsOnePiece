@@ -17,13 +17,8 @@ async function handleCopy(action) {
       break;
     }
 
-    case 'all-tabs-title-as-list': {
-      text = await BrowserAsMarkdown.allTabs('title');
-      break;
-    }
-
-    case 'all-tabs-url-as-list': {
-      text = await BrowserAsMarkdown.allTabs('url');
+    case 'all-tabs-link-as-one-piece': {
+      text = await BrowserAsMarkdown.allTabs('link', {'style':'onePiece'});
       break;
     }
 
@@ -32,13 +27,8 @@ async function handleCopy(action) {
       break;
     }
 
-    case 'highlighted-tabs-title-as-list': {
-      text = await BrowserAsMarkdown.highlightedTabs('title');
-      break;
-    }
-
-    case 'highlighted-tabs-url-as-list': {
-      text = await BrowserAsMarkdown.highlightedTabs('url');
+    case 'highlighted-tabs-link-as-one-piece': {
+      text = await BrowserAsMarkdown.highlightedTabs('link', {'style':'onePiece'});
       break;
     }
 

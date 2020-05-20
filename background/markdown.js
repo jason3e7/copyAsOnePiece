@@ -19,14 +19,17 @@ export function linkTo(title = DEFAULT_TITLE, url, { needEscape = true } = {}) {
   return `[${normalizedTitle}](${url})`;
 }
 
-export function imageFor(title, url) {
-  return `![${title}](${url})`;
-}
-
 export function list(theList) {
   return theList.map((item) => `* ${item}`).join('\n');
 }
 
+export function onePiece(theList) {
+  return theList.map((item) => `+ ${item}`).join('\n');
+}
+
 export function links(theLinks, options = {}) {
+  if (options.style === 'onePiece') {
+    return onePiece(theLinks.map((link) => linkTo(link.title, link.url, options)));
+  }
   return list(theLinks.map((link) => linkTo(link.title, link.url, options)));
 }

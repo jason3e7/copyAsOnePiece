@@ -2,9 +2,7 @@
 import * as Markdown from './markdown.js';
 
 const tabsToResult = {
-  link: (tabs, options) => Markdown.links(tabs, options),
-  title: (tabs /* , options */) => Markdown.list(tabs.map((tab) => tab.title)),
-  url: (tabs /* , options */) => Markdown.list(tabs.map((tab) => tab.url)),
+  link: (tabs, options) => Markdown.links(tabs, options)
 };
 
 /**
