@@ -42,9 +42,13 @@ chrome.windows.getCurrent({ populate: true }, (crWindow) => {
   const tabsCount = crWindow.tabs.length;
   const highlightedCount = crWindow.tabs.filter((tab) => tab.highlighted).length;
 
-  const displayCountOfAllTabs = document.getElementById('display-count-all-tabs');
-  displayCountOfAllTabs.textContent = String(tabsCount);
+  const displayCountOfAllTabs = document.getElementsByClassName('display-count-all-tabs');
+  for (var i = 0; i < displayCountOfAllTabs.length; i++) {
+    displayCountOfAllTabs[i].textContent = String(tabsCount);
+  }
 
-  const displayCountOfHighlightedTabs = document.getElementById('display-count-highlighted-tabs');
-  displayCountOfHighlightedTabs.textContent = String(highlightedCount);
+  const displayCountOfHighlightedTabs = document.getElementsByClassName('display-count-highlighted-tabs');
+  for (var i = 0; i < displayCountOfAllTabs.length; i++) {
+    displayCountOfHighlightedTabs[i].textContent = String(highlightedCount);
+  }
 });
