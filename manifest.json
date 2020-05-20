@@ -6,7 +6,6 @@
   "description": "Copy Link as OnePiece(Markdown code)",
   "permissions": [
     "tabs",
-    "contextMenus",
     "clipboardWrite"
   ],
   "browser_action": {
