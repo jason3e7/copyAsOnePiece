@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "version_name": "1.0.0",
   "manifest_version": 2,
-  "description": "Copy Link as OnePiece(Markdown) code",
+  "description": "Copy Link as OnePiece(Markdown code)",
   "permissions": [
     "tabs",
     "contextMenus",
