@@ -7,8 +7,15 @@ async function handleCopy(action) {
   let text;
 
   switch (action) {
-    case 'current-tab-link': {
-      text = await BrowserAsMarkdown.currentTab();
+    // not work need manual chrome://extensions/shortcuts
+    case 'current-tab-link-as-list': {
+      text = await BrowserAsMarkdown.currentTab({'style':'list'});
+      break;
+    }
+
+    // not work need manual chrome://extensions/shortcuts
+    case 'current-tab-link-as-one-piece': {
+      text = await BrowserAsMarkdown.currentTab({'style':'onePiece'});
       break;
     }
 

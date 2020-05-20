@@ -24,17 +24,17 @@
     "persistent": true
   },
   "commands": {
-    "current-tab-link": {
-      "description": "current tab: [title](url)"
+    "current-tab-link-as-list": {
+      "description": "current tab: * [title](url)",
+      "suggested_key": {
+        "default": "Ctrl+D"
+      }
     },
-    "all-tabs-link-as-list": {
-      "description": "all tabs: * [title](url)"
-    },
-    "all-tabs-title-as-list": {
-      "description": "all tabs: * title"
-    },
-    "all-tabs-url-as-list": {
-      "description": "all tabs: * url"
+    "current-tab-link-as-one-piece": {
+      "description": "current tab: + [title](url)",
+      "suggested_key": {
+        "default": "Ctrl+Shift+D"
+      }
     }
   }
 }

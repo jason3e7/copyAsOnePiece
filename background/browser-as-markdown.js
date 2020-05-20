@@ -15,6 +15,13 @@ function queryTabs(query) {
 export async function currentTab(options = {}) {
   const tabs = await queryTabs({ currentWindow: true, active: true });
   const onlyOneTab = tabs[0];
+
+  if (options.style === 'list') {
+    return Markdown.list([Markdown.linkTo(onlyOneTab.title, onlyOneTab.url, options)]);
+  }
+  if (options.style === 'onePiece') {
+    return Markdown.onePiece([Markdown.linkTo(onlyOneTab.title, onlyOneTab.url, options)]);
+  }
   return Markdown.linkTo(onlyOneTab.title, onlyOneTab.url, options);
 }
 
