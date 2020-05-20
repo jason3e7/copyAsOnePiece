@@ -37,8 +37,5 @@
     "all-tabs-url-as-list": {
       "description": "all tabs: * url"
     }
-  },
-  "options_ui": {
-    "page": "./ui/options.html"
   }
 }

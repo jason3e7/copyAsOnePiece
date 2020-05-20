@@ -1,5 +1,3 @@
-import * as OptionsManager from '../lib/options-manager.js';
-
 const ESCAPE_CHARS = /([\\`*_[\]<>])/g;
 const DEFAULT_TITLE = '(No Title)';
 
@@ -8,17 +6,7 @@ function escapeLinkText(text) {
 }
 
 let userOptions = {};
-
-async function reloadOptions() {
-  userOptions = await OptionsManager.load();
-  console.debug(userOptions);
-}
-
-reloadOptions();
-
-window.addEventListener('storage', () => {
-  reloadOptions();
-});
+userOptions.escape = 'yes';
 
 export function linkTo(title = DEFAULT_TITLE, url, { needEscape = true } = {}) {
   let normalizedTitle = title;
