@@ -1,0 +1,6 @@
+{
+  "manifest_version" : 2,
+  "name" : "Hello Extensions",
+  "version" : "1.0.0",
+  "description" : "Base Level Extension"
+}
