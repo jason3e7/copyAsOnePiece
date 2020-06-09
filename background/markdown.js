@@ -24,7 +24,7 @@ export function list(theList) {
 }
 
 export function onePiece(theList) {
-  return theList.map((item) => `* \#rating:80, ${item}`).join('\n');
+  return theList.map((item) => `* \\#rating:80, ${item}`).join('\n');
 }
 
 export function links(theLinks, options = {}) {
