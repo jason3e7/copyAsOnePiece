@@ -15,6 +15,10 @@ export function linkTo(title = DEFAULT_TITLE, url, { needEscape = true } = {}) {
   if (needEscape && userOptions.escape === 'yes') {
     normalizedTitle = escapeLinkText(title);
   }
+  
+  // alert(normalizedTitle)
+  normalizedTitle = normalizedTitle.replace(/^\(\d+\+*\) /g, "");
+  // alert(normalizedTitle);
 
   return `[${normalizedTitle}](${url})`;
 }
